@@ -1,0 +1,104 @@
+/* ──────────────────────────────────────────────────────────────────
+   Rubrion palette overrides — applied on top of Catppuccin Mocha
+   Tokens: #0a0a0f bg, #3b82f6 accent, zinc grays
+   Fonts:  Plus Jakarta Sans + JetBrains Mono
+────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* ── Override Mocha CSS variables with Rubrion palette ───────────── */
+.mocha {
+  --bg:                       #0a0a0f;
+  --fg:                       #e4e4e7;
+  --sidebar-bg:               #12121a;
+  --sidebar-fg:               #a1a1aa;
+  --sidebar-active:           #3b82f6;
+  --sidebar-non-existant:     #3f3f46;
+  --sidebar-spacer:           #3f3f46;
+  --scrollbar:                #27272a;
+  --icons:                    #52525b;
+  --icons-hover:              #3b82f6;
+  --links:                    #3b82f6;
+  --inline-code-color:        #60a5fa;
+  --theme-popup-bg:           #12121a;
+  --theme-popup-border:       #27272a;
+  --theme-hover:              rgba(59, 130, 246, 0.08);
+  --quote-bg:                 #12121a;
+  --quote-border:             #3b82f6;
+  --table-border-color:       #27272a;
+  --table-header-bg:          #1a1a24;
+  --table-alternate-bg:       #12121a;
+  --searchbar-border-color:   #27272a;
+  --searchbar-bg:             #1a1a24;
+  --searchbar-fg:             #e4e4e7;
+  --searchbar-shadow-color:   rgba(59, 130, 246, 0.15);
+  --searchresults-header-fg:  #71717a;
+  --searchresults-border-color: #27272a;
+  --searchresults-li-bg:      #1a1a24;
+  --sidebar-header-border-color: #3b82f6;
+  --search-mark-bg:           #1d4ed8;
+  --warning-border:           #f59e0b;
+  --copy-button-filter:       brightness(0) saturate(100%) invert(35%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+  --copy-button-filter-hover: brightness(0) saturate(100%) invert(45%) sepia(98%) saturate(1800%) hue-rotate(207deg) brightness(102%) contrast(96%);
+  --blockquote-note-color:    #3b82f6;
+  --blockquote-tip-color:     #22c55e;
+  --blockquote-important-color: #a855f7;
+  --blockquote-warning-color: #f59e0b;
+  --blockquote-caution-color: #ef4444;
+}
+
+/* ── Mocha syntax-highlighting background ────────────────────────── */
+.mocha.hljs {
+  background: #0d0d12;
+}
+.mocha code {
+  color: #60a5fa;
+  background: #0d0d12;
+}
+.mocha a code {
+  color: #3b82f6;
+}
+
+/* ── Fonts ───────────────────────────────────────────────────────── */
+body,
+.content,
+.sidebar,
+.sidebar-scrollbox,
+.menu-title,
+#searchbar,
+.searchresults-header {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+code, pre, kbd, samp {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ── Content width ───────────────────────────────────────────────── */
+.content main {
+  max-width: 880px;
+}
+
+/* ── Heading accents ─────────────────────────────────────────────── */
+.content h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.content h2 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 2.5rem;
+  padding: 0.15rem 0 0.15rem 0.75rem;
+  border-left: 3px solid #3b82f6;
+  border-bottom: none;
+}
+
+/* ── Print overrides ─────────────────────────────────────────────── */
+@media print {
+  .content h1 { border-bottom: 2px solid #3b82f6; }
+  .content h2 { border-left: 3px solid #3b82f6; border-bottom: none; }
+}

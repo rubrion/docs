@@ -1,0 +1,8 @@
+# Section dirs populated by scripts/assemble-docs.sh
+src/*/
+
+# Build output
+book/
+
+# Temp clone dir
+_repos/

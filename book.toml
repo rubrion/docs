@@ -1,0 +1,16 @@
+[book]
+title = "Rubrion Docs"
+description = "Documentation for the Rubrion platform — EdgePress, SpecFit, Rubrion Store, and Rubot."
+src = "src"
+language = "en"
+
+[output.html]
+site-url = "https://docs.rubrion.ai/"
+git-repository-url = "https://github.com/rubrion/rubrion-docs"
+no-section-label = true
+default-theme = "mocha"
+preferred-dark-theme = "mocha"
+additional-css = ["theme/catppuccin.css", "theme/mt2-overrides.css"]
+
+[build]
+build-dir = "book"
